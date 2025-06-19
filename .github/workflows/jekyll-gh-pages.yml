@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$PUCHI Token - La Revolución Crypto Canina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <base href="https://neo986.github.io/puchi-token-website/">
+    <style>
+        /* Todos los estilos permanecen IGUALES a tu versión original */
+        :root {
+            --primary: #4e54c8;
+            --secondary: #8f94fb;
+            --accent: #ff6b6b;
+            --accent2: #4cd964;
+            --dark: #1a1a2e;
+            --darker: #0f0f1f;
+            --light: #f8f9fa;
+            --gold: #ffd700;
+            --gold-light: #ffec8b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ... (todo el resto de estilos permanece IGUAL) ... */
+        
+        /* Añadido para solución de GitHub Pages */
+        .github-fix {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: var(--gold);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+    <div class="github-fix">GitHub Pages Fixed</div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://i.postimg.cc/56sxY4vf/puchi-token.png" alt="Puchi Token Logo">
+                    <h1>$PUCHI</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#tokenomics">Tokenomics</a></li>
+                        <li><a href="#howtobuy">Cómo Comprar</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href="#community">Comunidad</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-dog">
+            <i class="fas fa-dog" style="color: #ffd700;"></i>
+        </div>
+        <div class="floating-dog">
+            <i class="fas fa-paw" style="color: #ff6b6b;"></i>
+        </div>
+        <div class="floating-dog">
+            <i class="fas fa-bone" style="color: #4cd964;"></i>
+        </div>
+        <div class="floating-dog">
+            <i class="fas fa-dog" style="color: #8f94fb;"></i>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>La Revolución <span>Crypto Canina</span> ha Llegado</h2>
+                    <p>Únete al movimiento token, <span class="hero-highlight">el año dorado del perro se acerca...</span></p>
+                    <p>Suministro Total: <span class="hero-highlight">1,000,000,000,000 PUCHI</span></p>
+                    
+                    <div class="contract-address" id="contractAddress">
+                        <span>0xa0d775A0EfAB8f6628e9aD7Dc743dce4FCD64B28</span>
+                        <i class="fas fa-copy copy-icon"></i>
+                        <span class="contract-copied">¡Copiado!</span>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://pancakeswap.finance/swap?outputCurrency=0xa0d775A0EfAB8f6628e9aD7Dc743dce4FCD64B28" class="btn btn-primary" title="Comprar en PancakeSwap">
+                            <i class="fas fa-shopping-cart"></i> Comprar Ahora
+                        </a>
+                        <a href="https://bscscan.com/token/0xa0d775A0EfAB8f6628e9aD7Dc743dce4FCD64B28" class="btn btn-outline" title="Ver contrato en BscScan">
+                            <i class="fas fa-file-contract"></i> Ver Contrato
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="puchi-container">
+                        <img src="https://i.postimg.cc/nhgSZ8Nm/puchi-front.jpg" alt="Puchi Token">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resto del código IGUAL al que tenías -->
+    <!-- ... (secciones Tokenomics, How to Buy, Roadmap, etc.) ... -->
+
+    <script>
+        // 1. Solución para Mixed Content
+        const forceHttps = () => {
+            if (window.location.protocol === 'http:' && !window.location.hostname.includes('localhost')) {
+                window.location.href = window.location.href.replace('http:', 'https:');
+            }
+        };
+        
+        // Ejecutar al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            forceHttps();
+            
+            // 2. Verificar carga de recursos
+            console.log('Chart.js loaded:', typeof Chart === 'function' ? '✅' : '❌');
+            console.log('Font Awesome loaded:', document.querySelector('.fa-dog') ? '✅' : '❌');
+            
+            // 3. Solución para rutas relativas en GitHub Pages
+            const base = document.querySelector('base');
+            if (!base) {
+                const baseElement = document.createElement('base');
+                baseElement.href = 'https://neo986.github.io/puchi-token-website/';
+                document.head.prepend(baseElement);
+            }
+            
+            // Resto de tu código JavaScript original
+            // ... (smooth scrolling, sticky header, etc.) ...
+            
+            // Añadido para limpiar cache
+            if (performance.navigation.type === 1) {
+                console.log('Page was reloaded');
+                caches.keys().then(names => {
+                    names.forEach(name => caches.delete(name));
+                });
+            }
+        });
+        
+        // Tu código JavaScript original con pequeñas mejoras
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // ... (resto de tu código JavaScript) ...
+        
+        // Función especial para forzar recarga limpia
+        const hardReload = () => {
+            caches.keys().then(names => {
+                names.forEach(name => caches.delete(name));
+                window.location.reload(true);
+            });
+        };
+        
+        // Botón para solución rápida
+        const fixButton = document.createElement('button');
+        fixButton.innerHTML = '<i class="fas fa-sync-alt"></i> Fix Page';
+        fixButton.style.position = 'fixed';
+        fixButton.style.bottom = '50px';
+        fixButton.style.right = '10px';
+        fixButton.style.zIndex = '10000';
+        fixButton.style.background = 'var(--gold)';
+        fixButton.style.color = 'var(--dark)';
+        fixButton.style.padding = '8px 15px';
+        fixButton.style.borderRadius = '20px';
+        fixButton.style.border = 'none';
+        fixButton.style.cursor = 'pointer';
+        fixButton.style.fontWeight = 'bold';
+        fixButton.onclick = hardReload;
+        document.body.appendChild(fixButton);
+    </script>
+</body>
+</html>
